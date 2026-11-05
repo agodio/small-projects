@@ -1,0 +1,6 @@
+# Datos ficticios
+# Las rutas deben ser absolutas o relativas al directorio donde se ejecuta el script
+# legajo nota ruta
+12345 10 Data/devolucion-1.txt
+23456 9,5 Data/devolucion-2.txt
+34567 8,5 Data/devolucion-3.txt
