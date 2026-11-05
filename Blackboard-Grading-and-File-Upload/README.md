@@ -25,15 +25,6 @@ The input file must contain one entry per line, with the following format:
 ```text
 student_id grade file_path
 ```
-
-For example:
-
-```text
-12345 8.5 Feedback/12345.pdf
-12346 9.0 Feedback/12346.pdf
-12347 7.0 Feedback/12347.pdf
-```
-
 Lines starting with `#` and empty lines are ignored. File paths can be absolute or relative to the current working directory.
 
 An example input file is provided in `Data/lista-legajos-notas-rutas.txt`.
