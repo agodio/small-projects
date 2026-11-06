@@ -4,6 +4,7 @@ import platform
 import shutil
 from pathlib import Path
 
+from playwright.sync_api import expect
 from playwright.sync_api import sync_playwright
 
 def find_chrome():
@@ -129,8 +130,14 @@ def buscar_alumno(page, legajo):
     return True
 
 
-def actualizar_nota(page, nota):
+def actualizar_nota(page, legajo, nota):
     """Actualiza la nota del alumno seleccionado."""
+
+    expect(
+        page.locator(
+            '[data-analytics-id="course.grade.gradebook.gridview.tableDataCell"]'
+        ).filter(has_text=legajo)
+    )
 
     page.locator(
         '[data-analytics-id="course.grade.gradebook.gridview.columnEditButton"]'
@@ -221,7 +228,7 @@ def procesar_alumno(page, legajo, nota, attachment):
     if not buscar_alumno(page, legajo):
         return
 
-    actualizar_nota(page, nota)
+    actualizar_nota(page, legajo, nota)
     adjuntar_feedback(page, legajo, attachment)
 
 
