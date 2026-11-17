@@ -259,7 +259,7 @@ def main():
 
         try:
             page = context.pages[0] if context.pages else context.new_page()
-            page.set_default_timeout(10000)
+            page.set_default_timeout(20000)
 
             page.goto("https://campus.itba.edu.ar/")
 
