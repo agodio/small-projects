@@ -3,7 +3,7 @@
 ## Crear links symbólicos
 
 ```bash
-# Crear links a cada vista y player indicada por cada grupo con el formato V_G# y P_G# donde # es el numeor de grupo.
+# Crear links a cada vista y player indicada por cada grupo con el formato V_G# y P_G# donde # es el numero de grupo.
 # V_G# es el link a la vista y P_G# es el link al player.
 # Estos links se crean dentro de la carpeta de cada grupo
 ```
